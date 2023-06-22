@@ -32,6 +32,7 @@ public class WeatherRestController {
 		return new ResponseEntity<Weather>(service.addCity(weather),HttpStatus.CREATED);
 		
 	}
+	
 	@GetMapping("/getweather")
 	public Weather getWeatherDetails(@RequestParam String city,Principal principal) {
 		Weather weatherDetails = service.getWeatherDetails(city);
